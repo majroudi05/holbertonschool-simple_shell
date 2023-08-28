@@ -14,6 +14,7 @@ if (fgets(input, sizeof(input), stdin) == NULL)
 {
 break;
 }
+input[strcspn(input, "\n")] = '\0';
 child_pid = fork();
 if (child_pid == -1)
 {
