@@ -16,6 +16,7 @@ end--;
 }
 *(end + 1) = '\0';
 }
+}
 int main(void)
 {
 char input[INPUT_LENGTH];
