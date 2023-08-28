@@ -3,7 +3,6 @@ int main(void)
 {
 char input[INPUT_LENGTH];
 pid_t child_pid;
-int i;
 while (1)
 {
 if (fgets(input, sizeof(input), stdin) == NULL)
