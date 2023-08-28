@@ -6,6 +6,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <ctype.h>
 #define INPUT_LENGTH 1024
 int main(void);
+void strtrim(char *str);
 #endif
