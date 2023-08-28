@@ -33,16 +33,10 @@ i++;
 token = strtok(NULL, " ");
 }
 args[i] = NULL;
-if (access(args[0], X_OK)== -1)
-{
-    perror("access");
-    exit(EXIT_FAILURE);
-}
-if (execve(args[0], args, NULL) == -1)
-{
+execve(args[0], args, NULL);
 perror("execve");
 exit(EXIT_FAILURE);
-}
+
 }
 else
 {
