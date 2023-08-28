@@ -7,6 +7,7 @@ fflush(stdout);
 int main(void)
 {
 char input[INPUT_LENGTH];
+pid_t child_pid;
 while (1)
 {
 display_prompt();
