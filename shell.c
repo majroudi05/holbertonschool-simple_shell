@@ -1,16 +1,10 @@
 #include"shell.h"
-void display_prompt(void)
-{
-printf("$");
-fflush(stdout);
-}
 int main(void)
 {
 char input[INPUT_LENGTH];
 pid_t child_pid;
 while (1)
 {
-display_prompt();
 if (fgets(input, sizeof(input), stdin) == NULL)
 {
 printf("\n");

@@ -7,6 +7,5 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #define INPUT_LENGTH 1024
-void display_prompt();
 int main(void);
 #endif
