@@ -7,7 +7,6 @@ while (1)
 {
 if (fgets(input, sizeof(input), stdin) == NULL)
 {
-printf("\n");
 break;
 }
 input[strcspn(input, "\n")] = '\0';
