@@ -1,22 +1,4 @@
 #include"shell.h"
-void strtrim(char *str)
-{
-char *end;
-while (*str && isspace(*str))
-{
-str++;
-}
-if (*str == '\0')
-{
-return;
-end = str + strlen(str) - 1;
-while (end > str && isspace(*end))
-{
-end--;
-}
-*(end + 1) = '\0';
-}
-}
 int main(void)
 {
 char input[INPUT_LENGTH];
@@ -27,7 +9,7 @@ if (fgets(input, sizeof(input), stdin) == NULL)
 {
 break;
 }
-strtrim(input);
+input[strcspn(input, "\n")] = '\0';
 child_pid = fork();
 if (child_pid == -1)
 {
