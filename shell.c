@@ -1,4 +1,9 @@
 #include"shell.h"
+/**
+*main - Entry Function
+*
+*Return: 0 (on success)
+*/
 int main(void)
 {
 char input[INPUT_LENGTH];
@@ -9,7 +14,6 @@ if (fgets(input, sizeof(input), stdin) == NULL)
 {
 break;
 }
-input[strcspn(input, "\n")] = '\0';
 child_pid = fork();
 if (child_pid == -1)
 {
