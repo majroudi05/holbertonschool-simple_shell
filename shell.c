@@ -10,7 +10,7 @@ if (fgets(input, sizeof(input), stdin) == NULL)
 printf("\n");
 break;
 }
-input[strcspn(input, "\n")] = '\0';
+input[strcspn(input] = '\0';
 child_pid = fork();
 if (child_pid == -1)
 {
