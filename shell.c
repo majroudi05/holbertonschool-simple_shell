@@ -9,7 +9,7 @@ int main(void)
 char input[INPUT_LENGTH];
 pid_t child_pid;
 char *args[INPUT_LENGTH];
-har *token;
+char *token;
 int i = 0;
 while (1)
 {
@@ -33,7 +33,7 @@ i++;
 token = strtok(NULL, " ");
 }
 args[i] = NULL;
-exexve(args[0], args, NULL);
+execve(args[0], args, NULL);
 perror("execlp");
 exit(EXIT_FAILURE);
 }
