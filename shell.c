@@ -41,7 +41,7 @@ if (access(args[0], X_OK)== -1)
 if (execve(args[0], args, NULL) == -1)
 {
 perror("execve");
-exit(EXIT_FAILURE)
+exit(EXIT_FAILURE);
 }
 }
 else
