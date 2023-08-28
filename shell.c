@@ -8,6 +8,9 @@ int main(void)
 {
 char input[INPUT_LENGTH];
 pid_t child_pid;
+char *args[INPUT_LENGTH];
+har *token;
+int i = 0;
 while (1)
 {
 if (fgets(input, sizeof(input), stdin) == NULL)
@@ -22,11 +25,17 @@ perror("fork");
 }
 else if (child_pid == 0)
 {
-if (execlp(input, input, (char *)NULL) == -1)
+token = strtok(input, " ");
+while (token != NULL)
 {
+args[i] = token;
+i++;
+token = strtok(NULL, " ");
+}
+args[i] = NULL;
+exexve(args[0], args, NULL);
 perror("execlp");
 exit(EXIT_FAILURE);
-}
 }
 else
 {
