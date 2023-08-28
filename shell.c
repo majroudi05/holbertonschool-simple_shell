@@ -17,7 +17,7 @@ printf("\n");
 break;
 }
 input[strcspn(input, "\n")] = '\0';
-pid_t child_pid = fork();
+child_pid = fork();
 if (child_pid == -1)
 {
 perror("fork");
