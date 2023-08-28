@@ -27,7 +27,7 @@ perror("fork");
 else if (child_pid == 0)
 {
 token = strtok(input, " ");
-while (token != NULL && i < MAX_ARGS  - 1)
+while (token != NULL && i < INPUT_LENGTH  - 1)
 {
 args[i] = token;
 i++;
