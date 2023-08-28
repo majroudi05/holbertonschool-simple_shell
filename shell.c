@@ -34,7 +34,7 @@ token = strtok(NULL, " ");
 }
 args[i] = NULL;
 execve(args[0], args, NULL);
-perror("execlp");
+perror("execve");
 exit(EXIT_FAILURE);
 }
 else
