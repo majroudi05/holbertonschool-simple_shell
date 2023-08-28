@@ -3,6 +3,7 @@ int main(void)
 {
 char input[INPUT_LENGTH];
 pid_t child_pid;
+int i;
 while (1)
 {
 if (fgets(input, sizeof(input), stdin) == NULL)
@@ -15,7 +16,7 @@ if (strlen(input) >= 8 && input[0] == ' ' && input[strlen(input)-1] == ' ')
 char command[INPUT_LENGTH];
 snprintf(command, sizeof(command), "%s", input + 1); 
 command[strlen(command) - 1] = '\0';
-for (int i = 0; i < 4; i++)
+for (i = 0; i < 4; i++)
 {
 child_pid = fork();
 if (child_pid == -1)
