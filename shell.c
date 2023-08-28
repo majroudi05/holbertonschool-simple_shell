@@ -1,6 +1,7 @@
 #include"shell.h"
 void strtrim(char *str)
 {
+char *end;
 while (*str && isspace(*str))
 {
 str++;
@@ -8,8 +9,7 @@ str++;
 if (*str == '\0')
 {
 return;
-}
-char *end = str + strlen(str) - 1;
+end = str + strlen(str) - 1;
 while (end > str && isspace(*end))
 {
 end--;
